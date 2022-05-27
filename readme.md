@@ -1,4 +1,4 @@
-#### Data Types
+### Lab1: Data Types & Functions
 
 ##### Core Data Types:
 
@@ -135,4 +135,38 @@ function myCall(a: number, b: number, cb: (res: number) => void) {
 myCall(10, 10, (x) => {
   console.log("Result:" + x);
 });
+```
+
+### Lab2: Typescript Compilation
+
+##### Compile single file
+
+We can compile/watch single file by using
+
+> tsc app.ts -w
+
+##### Compiling multiple ts file
+
+To compile all the .ts file in the project we need to setup
+ts by
+
+> tsc --init
+
+after this we can watch/compile all the ts file by using
+
+> ts
+
+##### Exclude/Include file from compiling by tsc
+
+```typescript
+//Exclude tsc files
+"exclude": [
+"node_modules",
+"analytics.ts"
+]
+//Include tsc files
+"include": [
+"node_modules",
+"analytics.ts"
+]
 ```
